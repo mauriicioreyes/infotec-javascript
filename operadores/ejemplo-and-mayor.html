@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo Operador AND</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Operador AND</h2>
+
+    <script>
+        let valor1, valor2, valor3;
+        valor1 = parseInt(prompt('Ingresa el primer valor:'));
+        valor2 = parseInt(prompt('Ingresa el segundo valor:'));
+        valor3 = parseInt(prompt('Ingresa el tercer valor:'));
+
+        if (valor1 > valor2 && valor1 > valor3) {
+            document.write('El valor mayor es: valor1 (' + valor1 + ')');
+        } else if (valor2 > valor3 && valor2 > valor1) {
+            document.write('El valor mayor es: valor2 (' + valor2 + ')');
+        } else {
+            document.write('El valor mayor es: valor3 (' + valor3 + ')');
+        }
+    </script>
+</body>
+</html>
