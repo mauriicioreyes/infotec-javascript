@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Estructuras Condicionales Anidadas</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Estructuras Condicionales Anidadas</h2>
+
+    <script>
+        let nombreAlumno;
+        let calificacion1, calificacion2, calificacion3, promedioAlumno;
+        let estadoAlumno;
+
+        nombreAlumno = prompt('Ingresa el nombre del alumno:');
+        calificacion1 = parseFloat(prompt('Ingresa su primer calificación:'));
+        calificacion2 = parseFloat(prompt('Ingresa su segunda calificación:'));
+        calificacion3 = parseFloat(prompt('Ingresa su tercer calificación:'));
+
+        promedioAlumno = Math.round((calificacion1 + calificacion2 + calificacion3) / 3);
+
+        document.write('Alumno: ' + nombreAlumno);
+        document.write('<br/>')
+
+        if (promedioAlumno >= 7) {
+            estadoAlumno = 'acreditado';
+        } else if (promedioAlumno >= 4) {
+            estadoAlumno = 'regular';
+        } else {
+            estadoAlumno = 'reprobado';
+        }
+
+        document.write('Promedio: ' + promedioAlumno + ', ' + estadoAlumno);
+    </script>
+</body>
+</html>
