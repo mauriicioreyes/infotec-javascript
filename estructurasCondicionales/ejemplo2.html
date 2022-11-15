@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo 2 - Estructuras Condicionales - JS</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo 2 - Estructuras Condicionales</h2>
+
+    <script>
+        let nombreEmpleado;
+        let sueldoEmpleado;
+
+        nombreEmpleado = prompt("Ingresa tu nombre:");
+        sueldoEmpleado = parseFloat(prompt("Ingresa tu sueldo:"));
+
+        if(sueldoEmpleado > 3000) {
+            document.write(nombreEmpleado + ', tu sueldo es de ' + sueldoEmpleado + ', debes <strong>abonar</strong> impuestos!');
+        } else {
+            document.write(nombreEmpleado + ', tu sueldo es de ' + sueldoEmpleado + ', todo bien!');
+        }
+    </script>
+</body>
+</html>
