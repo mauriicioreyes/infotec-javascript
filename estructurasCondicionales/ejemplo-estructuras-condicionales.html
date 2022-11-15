@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo - Estructuras Condicionales - JS</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Estructuras Condicionales</h2>
+
+    <script>
+        let nombreAlumno;
+        let calificacion;
+
+        nombreAlumno = prompt('Ingresa el nombre del alumno:');
+        calificacion = parseInt(prompt('Ingresa su calificacion:'));
+
+        if(calificacion >= 6) {
+            document.write(nombreAlumno + ' aprobó con calificación de ' + calificacion);
+        } else {
+            document.write(nombreAlumno + ' reprobó, calificación: ' + calificacion)
+        }
+    </script>
+</body>
+</html>
