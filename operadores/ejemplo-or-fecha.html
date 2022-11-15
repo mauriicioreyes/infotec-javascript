@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo Operador OR</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Operador OR</h2>
+
+    <script>
+        let dia, mes, anho;
+        dia = parseInt(prompt("Ingresa el día:"));
+        mes = parseInt(prompt("Ingresa el mes:"));
+        anho = parseInt(prompt("Ingresa el año:"));
+
+        document.write('Fecha: ' + dia + '/' + mes + '/' + anho);
+        document.write('<br/>');
+        
+        if (mes == 1 || mes == 2 || mes == 3) {
+            document.write('El mes actual (' + mes + ') corresponde al primer trimestre del año ');
+        }
+    </script>
+</body>
+</html>
