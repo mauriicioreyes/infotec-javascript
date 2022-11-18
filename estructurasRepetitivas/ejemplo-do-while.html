@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo - Do While</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Do While</h2>
+    <script>
+        let valor;
+        let suma = 0;
+
+        do {
+            valor = parseInt(prompt('Ingresa un valor (9999 finaliza):'));
+            if (valor != 9999) {
+                suma = suma + valor;
+            }
+        } while (valor != 9999);
+
+        document.write('Suma: ' + suma);
+        document.write('<br/>');
+
+        if (suma > 0) {
+            document.write('El valor acumulado es mayor a cero');
+        } else if (suma < 0) {
+            document.write('El valor acumulado es menor a cero');
+        } else {
+            document.write('El valor acumulado igual a 0');
+        }
+    </script>
+</body>
+</html>
