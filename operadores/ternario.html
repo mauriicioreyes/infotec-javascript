@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Operador Ternario - JS</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Operador Ternario</h2>
+
+    <script>
+        let v1 = parseInt(prompt('Ingresa un primer valor:'));
+        let v2 = parseInt(prompt('Ingresa un segundo valor:'));
+        let valorMayor;
+
+        // Forma tradicional implementando if
+        // if (v1 > v2) {
+        //     valorMayor = v1;
+        // } else {
+        //     valorMayor = v2;
+        // }
+
+        // Operador Ternario
+        v1 > v2 ? valorMayor = v1 : valorMayor = v2;
+        document.write('El mayor de los dos valores es: ' + valorMayor);
+    </script>
+</body>
+</html>
