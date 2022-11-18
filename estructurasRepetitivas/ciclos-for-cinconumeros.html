@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>For - Ejemplo 2 - Estructuras Repetitivas</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>For - Ejemplo 2</h2>
+
+    <script>
+        let numero = 0, suma = 0;
+
+        for (let x = 1; x <= 10; x++) {
+            numero = parseInt(prompt('Ingresa un número (' + x + '):'));
+            document.write('Número ' + x + ': ' + numero + '<br/>');
+            if(x > 5) {
+                suma = suma + numero;
+            }
+        }
+        document.write('<br/>');
+        document.write('La suma de los últimos 5 números es: ' + suma);
+    </script>
+</body>
+</html>

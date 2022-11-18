@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo For - Estructuras Repetitivas</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo For - Estructuras Repetitivas</h2>
+    <script>
+        // Programa que lea 3 pares de datos (base y altura triangulo)
+        // Mostrar de cada triángulo su base, altura y superficie.
+        // Mostrar cantidad de tríangulos superficie > 12
+
+        let base, altura, superficie, contador = 0;
+
+        for (let x = 1; x <= 3; x++) {
+            base = parseFloat(prompt('Ingresa la base del triángulo (' + (x) + '):'));
+            altura = parseFloat(prompt('Ingresa la altura del triángulo (' + x + '):'));
+            
+            superficie = (base * altura) / 2;
+
+            
+            if (superficie > 12) {
+                contador++;
+            }
+            
+            document.write('Triángulo ' + x + '<br/>');
+            document.write('Base: ' + base + '<br/>');
+            document.write('Altura: ' + altura + '<br/>');
+            document.write('Superficie: ' + superficie + '<br/><br/>');
+        }
+
+        document.write('Cantidad de triángulos con superficie mayor a doce: ' + contador);
+    </script>
+</body>
+</html>
