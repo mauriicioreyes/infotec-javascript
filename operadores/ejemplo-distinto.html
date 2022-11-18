@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Operador Distinto A - JS</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Operador Distinto A</h2>
+
+    <script>
+        // != y !== puestos a == y ===
+        let variable1 = '55';
+        let variable2 = '20';
+        document.write('Operador ==');
+        document.write('<br/>');
+        if (variable1 == 55) {
+            document.write('Son iguales');
+        } else {
+            document.write('Son distintos')
+        }
+        
+        document.write('<br/>');
+        document.write('<br/>');
+        document.write('Operador ===');
+        document.write('<br/>');
+        
+        if (variable1 != 55) {
+            document.write('Son iguales');
+        } else {
+            document.write('Son distintos');
+        }
+
+        document.write('<br/>');
+        document.write('<br/>');
+        document.write('Operador !=');
+        document.write('<br/>');
+
+        if (variable2 !== 20) {
+            document.write(variable2 + ' es diferente a 55');
+        } else {
+            document.write(variable2 + ' es igual a 55');
+        }
+    </script>
+</body>
+</html>
