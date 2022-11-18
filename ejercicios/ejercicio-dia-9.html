@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio Día 9 - JS</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejercicio Día 9</h2>
+    <h3>Curso de JavaScript</h3>
+
+    <script>
+        let valor1, valor2, valor3;
+
+        valor1 = parseFloat(prompt('Ingresa el primer valor:'));
+        valor2 = parseFloat(prompt('Ingresa el segundo valor:'));
+        valor3 = parseFloat(prompt('Ingresa el tercer valor:'));
+
+        if (valor1 > valor2 && valor1 > valor3) {
+            document.write('El valor1 (' + valor1 + '), es mayor que valor2 (' + valor2 + ') y valor3 (' + valor3 + ')');
+        } else if (valor2 > valor3 && valor2 > valor1) {
+            document.write('El valor2 (' + valor2 + ') es mayor que valor1 (' + valor1 + ') y valor3 (' + valor3 + ')');
+        } else {
+            document.write('El valor3 (' + valor3 + ') es mayor que valor1 (' + valor1 + ') y valor2 (' + valor2 + ')');
+        }
+    </script>
+</body>
+</html>
