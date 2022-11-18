@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Problema - Estructuras Repetitivas</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Problema - Estructuras Repetitivas</h2>
+
+    <script>
+        let acumulador = 0, contador = 0;
+
+        while(contador < 5) {
+            acumulador = acumulador + parseInt(prompt('Ingresa un número (' + (contador+1) + '):'));
+            contador++;
+        }
+
+        document.write('Suma: ' + acumulador);
+    </script>
+</body>
+</html>
