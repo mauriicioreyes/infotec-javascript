@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo - Estructura - JavaScript</title>
+</head>
+<body>
+    <h2>Ejemplo3 - Recorrer Elementos</h2>
+
+    <script>
+        const personas = [{
+            nombre: 'Maria',
+            edad: '15'
+        }, {
+            nombre: 'Noé',
+            edad: 45
+        }, {
+            nombre: 'Mariana',
+            edad: 28
+        }, {
+            nombre: 'Crazy',
+            edad: 100
+        }];
+
+        document.write('<h3>Personas mayores de edad</h3>');
+        for (let persona of personas) {
+            if (persona.edad >= 18) {
+                document.write(`${persona.nombre} tiene ${persona.edad} años.<br/>`);
+            }
+        }
+    </script>
+</body>
+</html>

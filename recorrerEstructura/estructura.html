@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Estructura - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Estructura - Recorrer Elementos</h2>
+
+    <script>
+        const cadena = 'Hola Mundo';
+
+        for (let letra of cadena) {
+            document.write(`${letra}<br>`);
+        }
+
+        document.write('<br/>');
+        
+        const vector = [10, 20, 30, 40];
+        let suma = 0;
+        for (let elemento of vector) {
+            suma+=elemento;
+            document.write(`Suma del vector: ${suma}<br/>`);
+        }
+    </script>
+</body>
+</html>
