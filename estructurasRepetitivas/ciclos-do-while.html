@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Do While - Estructura Repetitiva</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Do While - Estructuras Repetitivas</h2>
+
+    <script>
+        // Solicitar un número 0 - 999, mostrar cuántos dígitos tiene.
+        // Finalizar al cargar 0
+        let numero;
+        let mensaje;
+
+        do {
+            numero = parseInt(prompt('Ingresa un número (0-999):'));
+            mensaje = 'Valor: ' + numero + ' tiene ';
+            if (numero < 10) {
+                mensaje = mensaje + '1 dígito. <br/>';
+            } else if (numero < 100) {
+                mensaje = mensaje + '2 dígitos. <br/>';
+            } else {
+                mensaje = mensaje + '3 dígitos. <br/>';
+            }
+            document.writeln(mensaje);
+        } while (numero != 0 && numero < 1000);
+
+    </script>
+</body>
+</html>
