@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bloque etiquetado con ruptura</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Bloque etiquetado con ruptura (break)</h2>
+    <script>
+        foo:{
+            console.log('face');
+            document.write('face<br/>');
+            break foo;
+            console.log('this will not be executed');
+            document.write('this will not be executed<br/>');
+        }
+        console.log('swap');
+        document.write('swap');
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo Break</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo Break</h2>
+    <script>
+        let i, j;
+        loop1:
+        for (i = 0; i < 3; i++) {
+            loop2:
+            for (j = 0; j < 3; j++) {
+                if (i === 1 && j === 1) {
+                    break loop1;
+                }
+                console.log('i = ' + i + ', j = ' + j);
+                document.write('i = ' + i + ', j = ' + j + '<br/>');
+            }
+        }
+    </script>
+</body>
+</html>

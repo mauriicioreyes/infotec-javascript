@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo 1 - Labels</title>
+</head>
+<body>
+    <h2>Ejemplo 1 - Labels</h2>
+
+    <script>
+        let i, j;
+
+        loop1:
+            for (i = 0; i < 3; i++) {
+                loop2:
+                    for (j = 0; j < 3; j++) {
+                        if (i === 1 && j === 1) {
+                            continue loop1;
+                        }
+                        console.log('i = ' + i + ', j = ' + j);
+                        document.write('i = ' + i + ', j = ' + j + '<br/>');
+                    }
+            }
+    </script>
+</body>
+</html>
