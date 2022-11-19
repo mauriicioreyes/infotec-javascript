@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo 4 - Funciones en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo 4 - Funciones en JavaScript</h2>
+    <script>
+        function retornaMayorDeTresNumeros(valor1, valor2, valor3) {
+            if (valor1 > valor2 && valor1 > valor3) {
+                return valor1;
+            } else if (valor2 > valor1 && valor2 > valor3) {
+                return valor2;
+            } else {
+                return valor3;
+            }
+        }
+
+        let valor1 = parseInt(prompt('Ingresa un primer número:'));
+        let valor2 = parseInt(prompt('Ingresa un segundo número:'));
+        let valor3 = parseInt(prompt('Ingresa un tercer número:'));
+
+        document.write('Los tres valores ingresados son: ' + valor1 + ', ' + valor2 + ', ' + valor3 + ' <br/>El valor mayor es: ');
+        document.write(retornaMayorDeTresNumeros(valor1, valor2, valor3));
+    </script>
+</body>
+</html>
