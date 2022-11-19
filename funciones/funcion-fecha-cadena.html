@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo 3 - Funciones en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo 3 - Funciones en JavaScript</h2>
+
+    <script>
+        let dia = 0, mes = 0, anho = 0;
+
+        do {
+            dia = parseInt(prompt('Ingresa el día:'));
+        } while (dia === 0 || dia > 31 || isNaN(dia));
+
+        do {
+            mes = parseInt(prompt('Ingresa el mes:'));
+        } while (mes === 0 || mes > 12 || isNaN(mes));
+
+        do {
+            anho = parseInt(prompt('Ingresa el año:'));
+        } while (anho === 0 || isNaN(anho));
+
+        function formatearFecha(dia, mes, anho) {
+            let mensaje = 'Hoy es ' + dia + ' de ';
+            let mesTexto = '';
+
+            switch(mes) {
+                case 1:
+                    mesTexto = 'Enero';
+                    break;
+                case 2:
+                    mesTexto = 'Febrero';
+                    break;
+                case 3:
+                    mesTexto = 'Marzo';
+                    break;
+                case 4:
+                    mesTexto = 'Abril';
+                    break;
+                case 5:
+                    mesTexto = 'Mayo';
+                    break;
+                case 6:
+                    mesTexto = 'Junio';
+                    break;
+                case 7:
+                    mesTexto = 'Julio';
+                    break;
+                case 8:
+                    mesTexto = 'Agosto';
+                    break;
+                case 9:
+                    mesTexto = 'Septiembre';
+                    break;
+                case 10:
+                    mesTexto = 'Octubre';
+                    break;
+                case 11:
+                    mesTexto = 'Noviembre';
+                    break;
+                case 12:
+                    mesTexto = 'Diciembre';
+                    break;
+                default: break;
+            }
+            mensaje = mensaje + mesTexto + ' del año ' + anho;
+            return mensaje;
+        }
+
+        // Hoy es 6 de Junio del 2022
+        document.write(formatearFecha(dia, mes, anho));
+    </script>
+</body>
+</html>

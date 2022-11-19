@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo - Funciones en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo - Funciones en JavaScript</h2>
+
+    <script>
+        function mostrarComprendidos(inicio, fin) {
+            for (let f = inicio; f <= fin; f++) {
+                document.write(f + ' ');
+            }
+        }
+
+        let valorInferior = parseInt(prompt('Ingresa el valor más bajo:'));
+        let valorSuperior = parseInt(prompt('Ingresa el valor más alto:'));
+
+        mostrarComprendidos(valorInferior, valorSuperior);
+    </script>
+</body>
+</html>

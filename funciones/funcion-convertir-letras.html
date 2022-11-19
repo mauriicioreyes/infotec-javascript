@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo 2 - Funciones en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Ejemplo 2 - Funciones en JavaScript</h2>
+
+    <script>
+        function convertirLetras(x) {
+            switch(x) {
+                case 1:
+                    return "uno";
+                    break;
+                case 2:
+                    return "dos";
+                    break;
+                case 3:
+                    return "tres";
+                    break;
+                case 4:
+                    return "cuatro";
+                    break;
+                case 5:
+                    return "cinco";
+                    break;
+                default:
+                    return "Valor NO válido";
+            }
+        }
+
+        let resultado = parseInt(prompt('Ingresa un valor (1-5):'));
+        let letra = convertirLetras(resultado);
+        
+        document.write('Resultado: ' + letra);
+    </script>
+</body>
+</html>
