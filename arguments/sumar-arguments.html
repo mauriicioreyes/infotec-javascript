@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Arguments - Problema 1</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Arguments - Funciones</h2>
+    <h3>Problema 1</h3>
+    <script>
+        function sumarArgs() {
+            let resultado = 0;
+            for(let x = 0; x < arguments.length; x++) {
+                resultado = resultado + arguments[x];
+            }
+            return resultado;
+        }
+
+        document.write(sumarArgs(10, 25, 15));
+        document.write('<br>');
+        document.write(sumarArgs(1, 2, 3, 4, 5, 10));
+    </script>
+</body>
+</html>
