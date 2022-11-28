@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones como parámetros</h2>
+    <h3>Problema de JavaScript</h3>
+    <script>
+    // Ejemplo de funciones anidadas  
+        function calcular(x, y, funcion) {
+            let resultado = funcion(x, y);
+            return resultado;
+        }
+
+        // Función que recibe otra función como parámetro
+        // Recibe una función anónima ya que no tiene nombre
+        let s1 = calcular(10, 5, function(valor1, valor2) {
+            return valor1 + valor2;
+        });
+        document.write(s1 + '<br/>');
+
+        let s2 = calcular(10, 5, function(valor1, valor2) {
+            return valor1 - valor2;
+        });
+        document.write(s2 + '<br/>');
+
+        let s3 = calcular(10, 5, function(valor1, valor2) {
+            return valor1 * valor2;
+        });
+        document.write(s3 + '<br/>');
+    </script>
+</body>
+</html>
