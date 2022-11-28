@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones $</title>
+    <meta charset="UTF-8"/>
+</head>
+<body id="cuerpo">
+    <h2>Funciones de una letra</h2>
+    <h3>Problema de JavaScript</h3>
+    <h4 id="titulo"></h4>
+    <p id="parrafo"></p>
+    <script>
+        function $(elemento) {
+            return document.getElementById(elemento);
+        }
+        
+        function inicio() {
+            $('cuerpo').style.backgroundColor = '#CCCCCC';
+            $('titulo').innerHTML = 'Prueba';
+            $('parrafo').innerHTML = 'Contenido del párrafo';
+        }
+
+        inicio();
+    </script>
+</body>
+</html>
