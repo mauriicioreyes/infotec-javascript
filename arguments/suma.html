@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Arguments - Funciones</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Arguments - Funciones</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        function sumar(x, y) {
+            let suma = x + y;
+            return suma;
+        }
+
+        function sumarArguments() {
+            let sumaArg = arguments[0] + arguments[1];
+            return sumaArg;
+        }
+
+        document.write(sumar(10, 5));
+        document.write('<br/>');
+        document.write(sumarArguments(10,5));
+    </script>
+</body>
+</html>
