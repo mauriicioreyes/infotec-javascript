@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Variables en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Variables</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        // Directiva de modo estricto
+        'use strict';
+        
+        // variable global
+        let y = 15;
+        function imprimirGlobal() {
+            document.write(y + '<br/>');
+            y++;
+        }
+        imprimirGlobal();
+        document.write(y + '<br/>');
+        
+
+        function imprimirLocal() {
+            // Variable local
+            let x = 10;
+            document.write(x + '<br/>');
+        }
+        imprimirLocal();
+        document.write(x + '<br/>');
+        
+        
+        function imprimir() {
+            // Por defecto, si falta 'let' se crea tipo 'var'.
+            z = 20;
+            document.write(z + '<br/>');
+            z++;
+
+        }
+        imprimir();
+        document.write(z + '<br/>');
+    </script>
+</body>
+</html>
