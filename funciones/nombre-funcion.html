@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones como parámetros</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones como parámetros</h2>
+    <h3>Ejemplo con JavaScript</h3>
+    <script>
+        function sumar(valor1, valor2) {
+            return valor1 + valor2;
+        }
+
+        function restar(valor1, valor2) {
+            return valor1 - valor2;
+        }
+
+        function multiplicar(valor1, valor2) {
+            return valor1 * valor2;
+        }
+
+        function calcular(x, y, funcion) {
+            let resultado = funcion(x, y);
+            return resultado;
+        }
+
+        let s1 = calcular(5, 15, sumar);
+        document.write(s1 + '<br/>');
+
+        let s2 = calcular(5, 15, restar);
+        document.write(s2 + '<br/>')
+
+        let s3 = calcular(5, 15, multiplicar);
+        document.write(s3 + '<br/>');
+    </script>
+</body>
+</html>
