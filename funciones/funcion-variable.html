@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones como parámetros</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones como parámetros</h2>
+    <h3>Ejercicio de JavaScript</h3>
+    <script>
+        let primerFuncion = function(x, y) {
+            let resultado = x + y;
+            return resultado;
+        }
+        document.write(primerFuncion(10, 30) + '<br/>');
+
+        let segundaFuncion = primerFuncion;
+
+        document.write(segundaFuncion(15, 5) + '<br/>');
+    </script>
+</body>
+</html>
