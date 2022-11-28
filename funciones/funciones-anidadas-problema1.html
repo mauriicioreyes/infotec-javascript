@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones Anidadas - Problema</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones Anidadas</h2>
+    <h3>Ejercicio de JavaScript</h3>
+    <script>
+        function primerFuncion(parametro1) {
+            function segundaFuncion(parametro2) {
+                document.write('Parámetro de la función exterior: ' + parametro1 + '<br/>' + 'Parámetro de la función: ' + parametro2 + '<br/>' + 'Variable local de la función exterior: ' + valor1);
+            }
+            
+            let valor1 = 50;
+            segundaFuncion(100);
+        }
+        primerFuncion(30);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones Anidadas</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones Anidadas</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <div id="div1"></div>
+
+    <script>
+        function generarListaOrdenada(vector) {
+            let contenido = "";
+            function inicio() {
+                contenido = '<ol>';
+            }
+
+            function fin() {
+                contenido = contenido + '</ol>';
+            }
+
+            inicio();
+
+            for (let x = 0; x < vector.length; x++) {
+                contenido = contenido + '<li>' + vector[x] + '</li>';
+            }
+
+            fin();
+            return contenido;
+        }
+        let articulos = ["Leche", "Zanahoria", "Tomate", "Galletas", "Pan"];
+        document.getElementById('div1').innerHTML = generarListaOrdenada(articulos);
+    </script>
+</body>
+</html>
