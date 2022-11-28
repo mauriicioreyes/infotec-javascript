@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Valor Mayor - Arguments</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Valor Mayor - Arguments</h2>
+    <h3>Problema</h3>
+    <script>
+        function obtenerMayor() {
+            let mayor = 0;
+            for (let x = 0; x < arguments.length; x++) {
+                if (arguments[x] > mayor) {
+                    mayor = arguments[x];
+                }
+            }
+            return mayor;
+        }
+
+        document.write(obtenerMayor(10, 90, 5, 9, 600, 1));
+    </script>
+</body>
+</html>
