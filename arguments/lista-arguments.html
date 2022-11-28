@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Lista - Arguments</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Lista - Arguments</h2>
+    <h3>Problema</h3>
+    <div id="contenedor"></div>
+    <script>
+        function generarLista() {
+            let contenido = '<ol>';
+            for (let x = 1; x < arguments.length; x++) {
+                contenido = contenido + '<li>' + arguments[x] + '</li>';
+            }
+            contenido = contenido + '</ol>';
+            let contenedor = document.getElementById(arguments[0]);
+            contenedor.innerHTML = contenido;
+        }
+        generarLista("contenedor", "a", "b", "c");
+        </script>
+</body>
+</html>
