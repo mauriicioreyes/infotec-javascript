@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Función para eventos</title>
+    <meta charset="UTF-8"/>
+    <style>
+        .boton {
+            width: 50px;
+            height: 50px;
+        }
+
+        #resultado {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Función que asocia eventos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <input type="button" id="boton0" name="boton0" value="0" class="boton"/>
+    <input type="button" id="boton1" name="boton1" value="1" class="boton"/>
+    <input type="button" id="boton2" name="boton2" value="2" class="boton"/>
+    <input type="button" id="boton3" name="boton3" value="3" class="boton"/>
+    <input type="button" id="boton4" name="boton4" value="4" class="boton"/>
+    <input type="button" id="boton5" name="boton5" value="5" class="boton"/>
+    <input type="button" id="boton6" name="boton6" value="6" class="boton"/>
+    <input type="button" id="boton7" name="boton7" value="7" class="boton"/>
+    <input type="button" id="boton8" name="boton8" value="8" class="boton"/>
+    <input type="button" id="boton9" name="boton9" value="9" class="boton"/>
+    <br/>
+    <br/>
+    <div id="resultado"></div>
+
+    <script>
+        for(let x = 0; x <= 9; x++) {
+            document.getElementById('boton' + x).addEventListener('click', presion);
+        }
+
+        function presion(evento) {
+            document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML + evento.target.value;
+        }
+    </script>
+</body>
+</html>
