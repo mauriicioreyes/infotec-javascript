@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Parámetros por defecto - Funciones</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Parámetros por defecto - Funciones</h2>
+    <h3>Ejercicio en JavaScript</h3>
+    <script>
+        function generarTabla(valor = 2, cantidad = 10) {
+            document.write(`Tabla del ${valor}<br/>`);
+            let tabla = "";
+            for (let x = 1; x <= cantidad; x++) {
+                tabla += `${valor} x ${x} = ` + valor * x + `<br/>`;
+                if (x == cantidad) {
+                    tabla += '<br/>';
+                }
+            }
+            document.write(tabla);
+        }
+        generarTabla();
+        generarTabla(5, 20);
+        generarTabla(15, 5);
+    </script>
+</body>
+</html>
