@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones Flecha - Arrow Function</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones Flecha - Arrow Function</h2>
+    <h3>Ejercicio en JavaScript</h3>
+    <script>
+        const mayor = function(x, y) {
+            if (x > y) {
+                return x;
+            } else {
+                return y;
+            }
+        }
+
+        const mayorFlecha = (x, y) => {
+            if (x > y) {
+                return x
+            } else {
+                return y;
+            }
+        };
+
+        document.write(mayor(100, 30));
+        document.write('<br/>');
+        document.write(mayorFlecha(95, 69));
+    </script>
+</body>
+</html>
