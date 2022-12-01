@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Parámetros Rest - Funciones</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Parámetros Rest - Funciones</h2>
+    <h3>Problema de JavaScript</h3>
+    <script>
+        function ordenar(...lista) {
+            return lista.sort(
+                function(x, y) {
+                    if (x > y) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                }
+            );
+        }
+
+        const elementosOrdenados = ordenar(1, 230, 4, 50, 60);
+        document.write(elementosOrdenados.toString());
+
+    </script>
+</body>
+</html>
