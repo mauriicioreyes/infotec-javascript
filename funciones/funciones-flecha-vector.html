@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones Flecha - Arrow Functions</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones Flecha - Arrow Functions</h2>
+    <h3>Problema de JavaScript</h3>
+    <script>
+        const vector2 = [100, 9, 5, 100, 50, 40, 99, 1];
+        vector2.forEach(elemento => {
+            document.write(elemento + ' ');
+        });
+        
+        
+        const vector = [0, 9, 5, 100, 50, 40, 99, 1];
+        vector.sort((x, y) => {
+            if (x > y) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        
+        document.write('<br/>');
+        document.write(vector.toString());
+        document.write('<br/>');
+        
+        const doble = x => x * 2;
+
+        document.write(doble(10));
+        document.write('<br/>');
+        document.write(doble(100));
+
+        const mayor = (x, y) => (x > y) ? x: y;
+        document.write('<br/>');
+        document.write(mayor(10 , 60));
+        </script>
+</body>
+</html>
