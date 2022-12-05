@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Objetos en JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Objetos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        function Cliente(nombre, saldo) {
+            this.nombre = nombre;
+            this.saldo = saldo;
+            this.depositar = depositar;
+            this.retirar = function retirar(dinero) {
+                this.saldo = this.saldo - dinero;
+            };
+        }
+
+        function depositar(dinero) {
+            this.saldo = this.saldo + dinero;
+        }
+
+        // function retirar(dinero) {
+        //     this.saldo = this.saldo - dinero;
+        // }
+
+        let cliente1;
+        cliente1 = new Cliente('Mauricio', 1500);
+
+        document.write('Nombre del cliente: ' + cliente1.nombre + '<br/>');
+        document.write('Saldo actual: ' + cliente1.saldo + '<br/>');
+        cliente1.depositar(120);
+        document.write('Saldo luego de depositar $120 ===> ' + cliente1.saldo + '<br/>');
+        cliente1.retirar(1000);
+        document.write('Saldo luego de retirar $1000 ===> ' + cliente1.saldo + '<br/>');
+    </script>
+</body>
+</html>
