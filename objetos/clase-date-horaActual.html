@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Hora Actual - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Hora Actual</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        function mostrarFechaHora() {
+            let fecha = new Date();
+            document.write('Hoy es ');
+            document.write(fecha.getDate() + ' / ');
+            document.write((fecha.getMonth() + 1) + ' / ');
+            document.write(fecha.getFullYear());
+            document.write('<br/>');
+            document.write('Son las ');
+            document.write(fecha.getHours() + ':');
+            document.write(fecha.getMinutes() + ':');
+            document.write(fecha.getSeconds());
+        }
+
+        // Llamada a la función
+        mostrarFechaHora();
+    </script>
+</body>
+</html>
