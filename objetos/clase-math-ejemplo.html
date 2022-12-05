@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clase Math() - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Clase Math()</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        let valor = parseInt(prompt('Ingresa un valor entre 1 y 10: '));
+        let num = parseInt((Math.random() * 10) +1);
+        if (valor == num) {
+            document.write('¡Felicidades, usted ganó! <br/>');
+        } else {
+            document.write('¡Siga participando! <br/>');
+        }
+        document.write('<br/>');
+        document.write('Valor sorteado: ' + num);
+        document.write('<br/>');
+        document.write('Valor ingresado: ' + valor);
+    </script>
+</body>
+</html>
