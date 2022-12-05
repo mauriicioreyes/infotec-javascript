@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Funciones flecha - Arrow Functions</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Funciones flecha - Arrow Functions</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <p>Diferencia entre funciones anónimas y funciones flecha, implementando <i>this</i>.</p>
+    <script>
+        var objeto1 = {
+            x: 10,
+            metodo1: function() {
+                alert(this.x); // 10
+            },
+            metodo2: () => {
+                // Las funciones flecha son más adecuadas cuando las trabajamos como funciones independientes, y no como métodos de un objeto.
+                alert(this.x); // undefined, no existe el contexto 'this'.
+            }
+        }
+
+        objeto1.metodo1();
+        objeto1.metodo2();
+    </script>
+</body>
+</html>
