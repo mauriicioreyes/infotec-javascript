@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clases y Objetos - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Juego de la Quiniela</h2>
+    <h3>Clases y Objetos en JavaScript</h3>
+    <script>
+        // clase NumeroQuiniela
+        function NumeroQuiniela(nombre) {
+            this.nombre = nombre;
+            this.cargarNumero = function() {
+                this.numero = parseInt(prompt(this.nombre + ', ingresa un número de quiniela: '));
+            }
+            this.verificarSiGano = function(num) {
+                if (this.numero == num) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        // clase Bolillero
+        function Bolillero() {
+            this.numero = -1;
+            this.sortearNumero = function() {
+                this.numero = parseInt((Math.random() * 10) + 1);
+            }
+        }
+
+        // Bloque principal
+        let numeroQuiniela1;
+        numeroQuiniela1 = new NumeroQuiniela('Daniel');
+        numeroQuiniela1.cargarNumero();
+
+        let numeroQuiniela2;
+        numeroQuiniela2 = new NumeroQuiniela('Ana');
+        numeroQuiniela2.cargarNumero();
+
+        let bolillero1;
+        bolillero1 = new Bolillero();
+        bolillero1.sortearNumero();
+        document.write('Número sorteado: ' + bolillero1.numero + '<br/>');
+        
+        document.write(numeroQuiniela1.nombre + ' eligió ' + numeroQuiniela1.numero + '<br/>');
+
+        document.write(numeroQuiniela2.nombre + ' eligió ' + numeroQuiniela2.numero + '<br/>')
+
+        if (numeroQuiniela1.verificarSiGano(bolillero1.numero)) {
+            document.write(numeroQuiniela1.nombre + ' ha ganado <br/>');
+        }
+        if (numeroQuiniela2.verificarSiGano(bolillero1.numero)) {
+            document.write(numeroQuiniela2.nombre + ' ha ganado <br/>');
+        }
+    </script>
+</body>
+</html>
