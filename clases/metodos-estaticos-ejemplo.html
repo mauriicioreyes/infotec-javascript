@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Métodos estáticos</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Métodos estáticos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        class Matematica {
+            static valorMayor(valor1, valor2) {
+                if (valor1 > valor2) {
+                    return valor1;
+                } else {
+                    return valor2;
+                }
+            }
+
+            static valorMenor(valor1, valor2) {
+                if (valor1 < valor2) {
+                    return valor1;
+                } else {
+                    return valor2;
+                } 
+            }
+
+            static valorAleatorio(valorInicio, valorFin) {
+                return Math.trunc((Math.random() * (valorFin + 1 - valorInicio)) + valorInicio);
+            }
+        }
+
+        let x1 = Matematica.valorAleatorio(1, 10);
+        let x2 = Matematica.valorAleatorio(1, 10);
+        document.write(`El mayor entre ${x1} y ${x2} es ${Matematica.valorMayor(x1, x2)} <br/>`);
+        document.write(`El menor entre ${x1} y ${x2} es ${Matematica.valorMenor(x1, x2)} <br/>`);
+    </script>
+</body>
+</html>
