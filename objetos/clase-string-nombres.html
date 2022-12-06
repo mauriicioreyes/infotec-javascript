@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clase String - Ejercicio 2</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Clase String</h2>
+    <h3>Ejercicio 2</h3>
+    <script>
+        let nombre;
+        let cantidad = 0;
+        do {
+            nombre = prompt('Ingresa un nombre: (Fin para salir):');
+            if (nombre != 'Fin') {
+                document.write((cantidad + 1) + '. ' + nombre + '<br/>');
+                cantidad++;
+            } else {
+                document.write('<br/>');
+            }
+        } while (nombre != 'Fin');
+
+        document.write('Cantidad: ' + cantidad);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clase String - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Clase String</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    <script>
+        let contador = 0;
+        let final = 'La entrada tiene ' + contador + 'caracteres';
+
+        let = nombre = 'Mauricio';
+        document.write(nombre);
+        document.write('<br/>');
+        
+        // Propiedad length
+        document.write(nombre.length);
+        document.write('<br/>');
+        
+        // charAt(pos)
+        let primerCaracter = nombre.charAt(0);
+        document.write(primerCaracter);
+        document.write('<br/>');
+        document.write('<br/>');
+
+        // substring(posicionInicial, posicionFinal)
+        let cadena = 'Juan Victor, Ing. en Sistemas Computacionales';
+        let soloNombre = cadena.substring(0 , 11);
+        document.write(cadena + '<br/>');
+        document.write(soloNombre + '<br/>');
+        let soloCarrera = cadena.substring(13);
+        document.write(soloCarrera + '<br/>');
+        document.write('<br/>');
+        
+        // indexOf
+        let nombreCompleto = 'Mauricio Reyes';
+        document.write(nombreCompleto + '<br/>');
+        let posicion = nombreCompleto.indexOf('Reyes');
+        if (posicion != -1) {
+            document.write('Existe el apellido en el nombre: ' + posicion)
+        }
+        document.write('<br/>');
+        document.write('<br/>');
+        
+        // toUpperCase()
+        nuevaCadena = 'Soy una cadena algo desOrdenada';
+        document.write('Original: ' + nuevaCadena);
+        document.write('<br/>');
+        nuevaCadena = nuevaCadena.toUpperCase();
+        document.write('toUpperCase(): ' + nuevaCadena);
+        document.write('<br/>');
+
+        // toLowerCase()
+        nuevaCadena = nuevaCadena.toLowerCase();
+        document.write('toLowerCase(): ' + nuevaCadena);
+    </script>
+</body>
+</html>

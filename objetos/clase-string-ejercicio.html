@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clase String - JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Clase String</h2>
+    <h3>Ejercicio 1</h3>
+    <script>
+        let cadena = prompt('Ingresa una cadena: ');
+        document.write('Cadena original: ' + cadena + '<br/><br/>');
+        document.write('Cantidad de caracteres: ' + cadena.length + '<br/>');
+        document.write('Primer caracter: ' + cadena.charAt(1) + '<br/>');
+        document.write('Primeros 3 caracteres: ' + cadena.substring(0, 3) + '<br/>');
+
+        if (cadena.indexOf('hola') != -1) {
+            document.write('Existe hola <br/>');
+        } else {
+            document.write('No existe hola <br/>');
+        }
+
+        document.write('toUpperCase(): ' + cadena.toUpperCase() + '<br/>');
+        document.write('toLowerCase(): ' + cadena.toLowerCase() + '<br/>');
+    </script>
+</body>
+</html>
