@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Herencia en Clases</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Herencia en Clases</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        class Persona {
+            constructor(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+
+            imprimir() {
+                document.write(`Nombre: ${this.nombre}<br/>`);
+                document.write(`Edad: ${this.edad}<br/>`);
+            }
+        }
+
+        class Empleado extends Persona {
+            constructor(nombre, edad, sueldo) {
+                super(nombre, edad);
+                this.sueldo = sueldo;
+            }
+
+            imprimir() {
+                super.imprimir();
+                document.write(`Sueldo: ${this.sueldo}<br/>`);
+            }
+
+            pagaImpuestos() {
+                if (this.sueldo > 5000) {
+                    document.write(`${this.nombre} debe pagar impuestos<br/>`);
+                } else {
+                    document.write(`${this.nombre} no debe pagar impuestos<br/>`);
+                }
+            }
+        }
+
+        const persona1 = new Persona('Alejandra Marquez', 27);
+        persona1.imprimir();
+
+        document.write('<br/>');
+
+        const empleado1 = new Empleado('Mauricio Reyes', 26, 5001);
+        empleado1.imprimir();
+        empleado1.pagaImpuestos();
+    </script>
+</body>
+</html>

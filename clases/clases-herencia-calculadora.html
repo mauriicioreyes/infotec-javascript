@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Herencia en Clases</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Calculadora - Herencia en Clases</h2>
+    <h3>Ejercicio de JavaScript</h3>
+
+    <script>
+        class Calculadora {
+            constructor(valor1, valor2) {
+                this.valor1 = valor1;
+                this.valor2 = valor2;
+                this.resultado = null;
+            }
+
+            sumar() {
+                this.resultado = this.valor1 + this.valor2;
+                document.write(`La suma de ${this.valor1} y ${this.valor2} es `);
+                this.imprimir();
+            }
+
+            restar() {
+                this.resultado = this.valor1 - this.valor2;
+                document.write(`La resta de ${this.valor1} y ${this.valor2} es `);
+                this.imprimir();
+            }
+
+            dividir() {
+                this.resultado = this.valor1 / this.valor2;
+                document.write(`La división de ${this.valor1} y ${this.valor2} es `);
+                this.imprimir();
+            }
+            multiplicar() {
+                this.resultado = this.valor1 * this.valor2;
+                document.write(`La multiplicación de ${this.valor1} y ${this.valor2} es `);
+                this.imprimir();
+            }
+            
+            imprimir() {
+                document.write(`${this.resultado} <br/>`);
+            }
+        }
+
+        class CalculadoraCientifica extends Calculadora{
+            constructor(valor1, valor2) {
+                super(valor1, valor2);
+            }
+
+            cuadradoPrimerNumero() {
+                this.resultado = this.valor1 * this.valor1;
+                document.write(`${this.valor1} elevado al cuadrado es `);
+                this.imprimir();
+            }
+
+            raizCuadrada() {
+                this.resultado = Math.sqr(this.valor1);
+                document.write(`La raíz cuadrada de ${this.valor1} es `);
+                this.imprimir();
+            }
+        }
+
+        document.write('Calculadora <br/>');
+        const calculadora1 = new Calculadora(200, 30);
+        calculadora1.sumar();
+        calculadora1.restar();
+        calculadora1.multiplicar();
+        calculadora1.dividir();
+
+        document.write('<br/>');
+        
+        document.write('Calculadora Científica <br/>');
+        const CalculadoraCientifica1 = new CalculadoraCientifica(100, 15);
+        CalculadoraCientifica1.sumar();
+        CalculadoraCientifica1.restar();
+        CalculadoraCientifica1.multiplicar();
+        CalculadoraCientifica1.dividir();
+        CalculadoraCientifica1.cuadradoPrimerNumero();
+        CalculadoraCientifica1.raizCuadrada();
+    </script>
+</body>
+</html>
