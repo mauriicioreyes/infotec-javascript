@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Vectores tipo objeto</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Vectores con componentes tipo objeto</h2>
+    <h3>Ejercicio de JavaScript</h3>
+
+    <script>
+        function Hipervinculo(direccion, titulo) {
+            this.direccion = direccion;
+            this.titulo = titulo;
+            this.retornarHipervinculo = function() {
+                let cadena;
+                cadena = '<a href=' + this.direccion + '>' + this.titulo + '</a>';
+                return cadena;
+            }
+        }
+
+        let vector = new Array(3);
+        vector[0] = new Hipervinculo('https://www.google.com', 'Google');
+        vector[1] = new Hipervinculo('https://www.twitter.com', 'Twitter');
+        vector[2] = new Hipervinculo('https://www.instagram.com', 'Instagram');
+
+        for (let x = 0; x < vector.length; x++) {
+            document.write(vector[x].retornarHipervinculo() + '<br/>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vectores tipo objeto</title>
+</head>
+<body>
+    <h2>Vectores con componentes de tipo objeto</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        function Persona(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.imprimirNombre = function() {
+                document.write(this.nombre + ' tiene ' + this.edad + ' años<br/>');
+            }
+        }
+
+        let vector = new Array(4);
+        vector[0] = new Persona('Mauricio', 15);
+        vector[1] = new Persona('Daniel', 26);
+        vector[2] = new Persona('Maria', 22);
+        vector[3] = new Persona('Edith', 26);
+        let posicionMayor = 0;
+
+        for (let x = 1; x < vector.length; x++) {
+            if (vector[x].edad > vector[posicionMayor].edad) {
+                posicionMayor = x;
+            }
+        }
+
+        document.write('Personas con mayor edad: <br/>');
+
+        for (let x = 0; x < vector.length; x++) {
+            if (vector[x].edad == vector[posicionMayor].edad) {
+                vector[x].imprimirNombre();
+            }
+        }
+    </script>
+</body>
+</html>
