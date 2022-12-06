@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Objetos Literales</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Objetos Literales</h2>
+    <h3>Ejercicio de JavaScript</h3>
+
+    <script>
+        let participante1 = {
+            nombre: 'Mauricio',
+            puntos: 0,
+            imprimir: function() {
+                document.write('Jugador: ' + this.nombre + '<br/>');
+                document.write('Puntaje: ' + this.puntos + '<br/>');
+                this.verificarSiGano();
+            },
+            aumentarPuntos: function(cantidadPuntos) {
+                this.puntos = this.puntos + cantidadPuntos;
+                document.write('<br/>+' + cantidadPuntos + ' puntos para ' + this.nombre + '<br/>');
+            },
+            verificarSiGano: function() {
+                if (this.puntos > 1000) {
+                    document.write('<br/>¡Felicidades, ganaste el juego con ' + this.puntos + ' puntos!<br/>');
+                } else {
+                    document.write('<br/>No te rindas! <br/>');
+                }
+            }
+        };
+
+        participante1.imprimir();
+        participante1.aumentarPuntos(100);
+        document.write('<br/>');
+        participante1.imprimir();
+        participante1.aumentarPuntos(2000);
+        document.write('<br/>');
+        participante1.imprimir();
+    </script>
+</body>
+</html>
