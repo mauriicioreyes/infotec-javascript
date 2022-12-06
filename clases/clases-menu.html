@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Declaración de Clases</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Declaración de Clases</h2>
+    <h3>Ejercicio de JavaScript</h3>
+    <div id="menu"></div>
+
+    <script>
+        class Menu {
+            constructor() {
+                this.enlaces = [];
+                this.descripcion = [];
+            }
+
+            insertar(enlace, descripcion) {
+                this.enlaces.push(enlace);
+                this.descripcion.push(descripcion);
+            }
+
+            mostrar(elemento) {
+                let cadena = '<div>';
+                for (let x = 0; x < this.enlaces.length; x++) {
+                    cadena += `[<a href="${this.enlaces[x]}">${this.descripcion[x]}</a>]`
+                }
+                cadena += '</div>';
+                document.getElementById(elemento).innerHTML = cadena;
+            }
+        }
+
+        const menu = new Menu();
+        menu.insertar("https://www.google.com.mx", "Google");
+        menu.insertar("https://www.facebook.com", "Facebook");
+        menu.insertar("https://www.twitter.com", "Twitter");
+        menu.insertar("https://www.infotec.mx", "INFOTEC");
+        menu.mostrar('menu');
+    </script>
+</body>
+</html>

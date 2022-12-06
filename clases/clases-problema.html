@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Declaración de Clases</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Declaración de Clases</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        class Cliente {
+            constructor(nombre, saldo) {
+                this.nombre = nombre;
+                this.saldo = saldo;
+            }
+            depositar(monto) {
+                this.saldo = this.saldo + monto;
+                document.write('+ Depósito: ' + monto + '<br/>');
+            }
+            
+            retirar(monto) {
+                this.saldo = this.saldo - monto;
+                document.write('- Retiro: ' + monto + '<br/>');
+            }
+
+            imprimir() {
+                document.write('Cuenta de ' + this.nombre + '<br/>');
+                document.write('Saldo actual: ' + this.saldo + '<br/>');
+            }
+        };
+
+        const cliente1 = new Cliente('Mauricio', 5000);
+        cliente1.imprimir();
+        cliente1.depositar(450);
+        cliente1.imprimir();
+        cliente1.retirar(1500);
+        cliente1.imprimir();
+
+        document.write('<br/>');
+
+        const cliente2 = new Cliente('Ana', 1999);
+        cliente2.imprimir();
+        cliente2.depositar(500);
+        cliente2.imprimir();
+        cliente2.retirar(500);
+        cliente2.imprimir();
+        cliente2.depositar(1001);
+        cliente2.imprimir();
+        </script>
+</body>
+</html>
