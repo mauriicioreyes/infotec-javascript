@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Encapsulamiento (get y set)</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Encapsulamiento (get y set)</h2>
+    <h3>Ejercicio de JavaScript</h3>
+
+    <script>
+        class Persona {
+            constructor(nombre, edad) {
+                this._nombre = nombre;
+                this._edad = edad;
+            }
+
+            get getNombre() {
+                return this._nombre;
+            }
+
+            set setNombre(nombre) {
+                this._nombre = nombre;
+            }
+
+            get getEdad() {
+                return this._edad;
+            }
+
+            set setEdad(edad) {
+                if (edad > 0 && edad % 1 === 0) {
+                    this._edad = edad;
+                } else {
+                    throw 'Error en asignación de edad';
+                }
+            }
+
+            imprimir() {
+                document.write(`Nombre: ${this.getNombre} <br/> Edad: ${this.getEdad} años <br/>`);
+            }
+        };
+        
+        const persona1 = new Persona('Mauricio Reyes', 45);
+        persona1.imprimir();
+        persona1.setEdad = 26;
+        persona1.imprimir();
+    </script>
+</body>
+</html>
