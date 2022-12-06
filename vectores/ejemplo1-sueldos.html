@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays o Vectores</title>
+</head>
+<body>
+    <h2>Arrays o Vectores</h2>
+    <h3>Ejemplo en JavaScript</h3>
+
+    <script>
+        function cargar(sueldos) {
+            for (let x = 0; x < sueldos.length; x++) {
+                let v = prompt('Ingresa el sueldo: ');
+                sueldos[x] = parseInt(v);
+            }
+        }
+
+        function calcularGastos(sueldos) {
+            let total = 0;
+            for (let x = 0; x < sueldos.length; x++) {
+                total += sueldos[x];
+            }
+            document.write('Listado de sueldos <br/>');
+            for (let x = 0; x < sueldos.length; x++) {
+                document.write(`Sueldo ${x+1}: ${sueldos[x]} <br/>`);
+            }
+            document.write(`Total de gastos en sueldos: ${total}`);
+        }
+ 
+        let sueldos;
+        sueldos = new Array(4);
+        cargar(sueldos);
+        calcularGastos(sueldos);
+    </script>
+</body>
+</html>

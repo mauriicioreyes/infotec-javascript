@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Arrays o Vectores</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Arrays o Vectores</h2>
+    <h3>Ejemplo en JavaScript</h3>
+
+    <script>
+        // 1
+        let persona = ['Marco Antonio', 40, 56.90];
+        document.write(`${persona[0]} tiene una edad de ${persona[1]} y un peso de ${persona[2]} <br/>`);
+
+        // 2
+        let ingresos = [];
+        ingresos [3] = 1000;
+        ingresos[5] = 3500;
+        for (let x = 0; x < ingresos.length; x++) {
+            document.write(`Ingresos[${x}]: ${ingresos[x]} <br/>`);
+        }
+
+        document.write('<br/>');
+
+        // 3
+        let matrizIdentidad = [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ];
+        for (let x = 0; x < matrizIdentidad.length; x++) {
+            for (let y = 0; y < matrizIdentidad.length; y++) {
+                document.write(matrizIdentidad[x][y] + ' ');
+            }
+            document.write('<br/>');
+        }
+    </script>
+</body>
+</html>

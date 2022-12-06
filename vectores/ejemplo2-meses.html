@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Arrays o Vectores</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Arrays o Vectores</h2>
+    <h3>Ejemplo en JavaScript</h3>
+
+    <script>
+        let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+        // let diasMeses = new Array(12);
+        // diasMeses[0] = 31; // Enero
+        let diasMeses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        function mostrarFecha(meses, diasMeses) {
+            let numeroMes = parseInt(prompt('Ingresa un valor entre 1 - 12: '));
+            document.write(`Corresponde al mes: ${meses[numeroMes-1]} <br/>`);
+            document.write(`Tiene ${diasMeses[numeroMes-1]} días <br/>`);
+        }
+
+        mostrarFecha(meses, diasMeses);
+    </script>
+</body>
+</html>
