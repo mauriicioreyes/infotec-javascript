@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Filter</title>
+</head>
+<body>
+    <h2>Método Filter</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const personas = [
+            {
+                nombre: "Alejandro",
+                edad: 30
+            },
+            {
+                nombre: "Mariana",
+                edad: 18
+            },
+            {
+                nombre: "Maria Fernanda",
+                edad: 16
+            },
+            {
+                nombre: "Laura",
+                edad: 18
+            },
+            {
+                nombre: "José",
+                edad: 50
+            },
+            {
+                nombre: "Sandra",
+                edad: 14
+            }
+        ];
+
+        // const personasMayores = personas.filter((elemento, indice, arreglo) => elemento.edad >= 18);
+        const personasMayores = personas.filter(function(elemento, indice, arreglo) { return elemento.edad >= 18});
+        console.log(personasMayores); // (4)[{… }, {… }, {… }, {… }]
+        // 0: { nombre: 'Alejandro', edad: 30 }
+        // 1: { nombre: 'Mariana', edad: 18 }
+        // 2: { nombre: 'Laura', edad: 18 }
+        // 3: { nombre: 'José', edad: 50 }
+        
+
+    </script>
+</body>
+</html>
