@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>indexOf, lastIndexOf e includes</title>
+</head>
+<body>
+    <h2>Métodos indexOf, lastIndexOf e includes</h2>
+    <h3>Búsqueda de valores e índices en un arreglo</h3>
+    
+    <script>
+        let arreglo1 = [10, 20, 30, 40, 50, 60, 10, 30, 50, 20];
+        
+        // Índice donde se almacena el valor 30
+        console.log(arreglo1.indexOf(30)); // 2
+
+        // Índice donde se almacena un valor inexistente
+        console.log(arreglo1.indexOf(200)); // -1
+
+        // Índice donde se almacena el valor 20
+        // buscándo desde el final
+        console.log(arreglo1.lastIndexOf(20)); // 9
+
+        // Índice donde se almacena el valor 30
+        // comenzando la búsqueda en la posición 5
+        console.log(arreglo1.indexOf(30, 5)); // 7
+
+        // Existe el valor 50 en el arreglo?
+        console.log(arreglo1.includes(50)); // true
+
+        // Existe el valor 150 en el arreglo?
+        console.log(arreglo1.includes(150)); // false
+
+        // Existe el valor 40 en el arreglo?
+        // a partir de la posición 5
+        console.log(arreglo1.includes(40, 5));
+    </script>
+</body>
+</html>
