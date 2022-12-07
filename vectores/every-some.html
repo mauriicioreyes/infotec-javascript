@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Métodos Every y Some</title>
+</head>
+<body>
+    <h2>Métodos Every y Some</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const personas = [
+            {
+                nombre: "Mariano",
+                edad: 35
+            },
+            {
+                nombre: "Hernesto",
+                edad: 45
+            },
+            {
+                nombre: "Mireya",
+                edad: 20
+            },
+            {
+                nombre: "Nataly",
+                edad: 18
+            },
+            {
+                nombre: "Esaú",
+                edad: 24
+            },
+            {
+                nombre: "Betsabé",
+                edad: 15
+            }
+        ];
+
+        // Todas las personas tienen una edad menor a 100?
+        console.log(personas.every((elemento, indice, arreglo) => elemento.edad < 100)); // true
+
+        // Todas las personas son mayores de edad?
+        console.log(personas.every((elemento, indice, arreglo) => elemento.edad >= 18)); // false
+
+        // Todas las personas tienen un nombre con 6 o menos caracteres?
+        console.log(personas.every((elemento, indice, arreglo) => elemento.nombre.length <= 6)); // false
+
+        // Alguna persona tiene 15 años de edad?
+        console.log(personas.some((elemento, indice, arreglo) => elemento.edad == 15)); // true
+
+        // Alguna persona es menor de edad?
+        console.log(personas.some((elemento, indice, arreglo) => elemento.edad < 18)); // true
+
+        // Alguna persona se llama Esaú?
+        console.log(personas.some((elemento, indice, arreglo) => elemento.nombre == "Esaú"));
+    </script>
+</body>
+</html>
