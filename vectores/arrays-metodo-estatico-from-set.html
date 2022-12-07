@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Set - Método Iterable</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>Set - Método Iterable</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const conjunto1 = new Set();
+        conjunto1.add("C#");
+        conjunto1.add("Borland C");
+        conjunto1.add("JavaScript");
+        conjunto1.add("Python");
+        conjunto1.add("Java");
+        conjunto1.add("Kotlin");
+        const arreglo1 = Array.from(conjunto1);
+        console.log(arreglo1); // (6) ['C#', 'Borland C', 'JavaScript', 'Python', 'Java', 'Kotlin']
+        console.log(arreglo1.length); // 6
+    </script>
+</body>
+</html>

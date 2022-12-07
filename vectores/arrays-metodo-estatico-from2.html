@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8"/>
+    <title>From - Método Estático</title>
+</head>
+<body>
+    <h2>From - Método Estático</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const arreglo1 = [10, 20, 30];
+        const arreglo2 = Array.from(arreglo1, (elemento) => elemento * 2);
+        const arreglo3 = Array.from(arreglo2, function(elemento) {return elemento * 2});
+        console.log(arreglo1); // (3) [10, 20, 30]
+        console.log(arreglo2); // (3) [20, 40, 60]
+        console.log(arreglo3); // (3) [40, 80, 120]
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Método Estático - Arrays</title>
+    <meta cahrset="UTF-8"/>
+</head>
+<body>
+    <h2>Método Estático - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const arreglo1 = [10, 20, 30];
+        const arreglo2 = Array.from(arreglo1);
+        const arreglo3 = arreglo1;
+        console.log('arreglo1: ' + arreglo1); // 10, 20, 30
+        arreglo1.fill(5);
+        console.log('arreglo1: ' + arreglo1); // 5, 5, 5
+        console.log('arreglo2: ' + arreglo2); // 10, 20, 30
+        console.log('arreglo3: ' + arreglo3); // 5, 5, 5
+        arreglo1.fill(1);
+        console.log('arreglo1: ' + arreglo1); // 1, 1, 1
+        console.log('arreglo2: ' + arreglo2); // 10, 20, 30
+        console.log('arreglo3: ' + arreglo3); // 1, 1, 1
+    </script>
+</body>
+</html>

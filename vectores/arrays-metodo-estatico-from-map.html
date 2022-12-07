@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>From - Método Iterable</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <h2>From - Método Estático</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const mapa1 = new Map();
+        mapa1.set("casa", "house");
+        mapa1.set("rojo", "red");
+        mapa1.set("auto", "car");
+        const arreglo1 = Array.from(mapa1);
+        console.log(arreglo1); // [Array(2), Array(2), Array(2)] ---> [["casa", "house"],["rojo", "red"],["auto", "car"]]
+        console.log(arreglo1.length); // 3
+    </script>
+</body>
+</html>
