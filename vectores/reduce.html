@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método reduce</title>
+</head>
+<body>
+    <h2>Método reduce</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const arreglo1 = [1, 2, 56, 3, 4, 120, 5, 18, 100, 6];
+
+        // Acumular todos los elementos que tienen solo un dígito
+        const cantidad = arreglo1.reduce((acumulador, elemento, indice, arreglo) => {
+            if (elemento < 10) {
+                acumulador += elemento;
+            }
+            return acumulador;
+        }, 0);
+        console.log(cantidad); // 21
+    </script>
+</body>
+</html>

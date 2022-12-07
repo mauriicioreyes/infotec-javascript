@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método reduceRight</title>
+</head>
+<body>
+    <h2>Método reduceRight</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const arreglo1 = [1, 40, 20, 5, 6, 8, 10, 33, 102];
+
+        // Generar un nuevo arreglo con los elementos invertidos
+        const arreglo2 = arreglo1.reduceRight((acumulador, elemento, indice, arreglo) => {
+            acumulador.push(elemento);
+            return acumulador;
+        }, []);
+        console.log(arreglo1); // (9) [1, 40, 20, 5, 6, 8, 10, 33, 102]
+        console.log(arreglo2); // (9) [102, 33, 10, 8, 6, 5, 20, 40, 1]
+    </script>
+</body>
+</html>
