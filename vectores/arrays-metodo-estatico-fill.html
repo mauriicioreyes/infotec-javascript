@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Método Fill</title>
+</head>
+<body>
+    <h2>Método Fill</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const arreglo1 = [10, 30, 0, 99, 100, 1, 15];
+        console.log(arreglo1); // (7) [10, 30, 0, 99, 100, 1, 15]
+
+        arreglo1.fill(3); // Fijamos el valor 3 a todos los componentes del arreglo.
+        console.log(arreglo1); // (7)[3, 3, 3, 3, 3, 3, 3]
+
+        arreglo1.fill(0, 3); // Finamos el valor 0 desde el componente 3 del arreglo hasta el final.
+        console.log(arreglo1); // (7) [3, 3, 3, 0, 0, 0, 0]
+
+        arreglo1.fill(5); // Fijamos el valor 5 a todos los componentes del arreglo.
+        console.log(arreglo1); // (7) [5, 5, 5, 5, 5, 5, 5]
+
+        arreglo1.fill(100, 3, 5); // Fijamos el valor 100 desde el componente 3 hasta el componente 5 sin incluirlo.
+        console.log(arreglo1); // (7) [5, 5, 5, 100, 100, 5, 5]
+
+        arreglo1.fill(5); // Fijamos el valor 5 a todos los componentes del arreglo.
+        console.log(arreglo1); // (7) [5, 5, 5, 5, 5, 5, 5]
+
+        arreglo1.fill(100, -2); // Fijamos el valor 100 en los dos últimos componentes.
+        console.log(arreglo1); // (7)[5, 5, 5, 5, 5, 100, 100]
+
+        arreglo1.fill(5); // Fijamos el valor 5 a todos los componentes del arreglo.
+        console.log(arreglo1); // (7) [5, 5, 5, 5, 5, 5, 5]
+
+        arreglo1.fill(100, -3, -1); // Fijamos el valor 100 en la antepenúltima y penúltima posición.
+        console.log(arreglo1); // [5, 5, 5, 5, 100, 100, 5]
+    </script>
+</body>
+</html>
