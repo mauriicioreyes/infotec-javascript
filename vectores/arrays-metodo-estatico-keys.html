@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Keys</title>
+</head>
+<body>
+    <h2>Método Keys</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        for (let indice of dias.keys()) {
+            console.log(indice); // 0, 1, 2, 3, 4, 5, 6
+        }
+        for (let valor of dias.values()) {
+            console.log(valor); // Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo
+        }
+        for (let componente of dias.entries()) {
+            console.log(componente); // (2)[0, 'Lunes'], (2)[1, 'Martes'], (2)[2, 'Miércoles'], (2)[3, 'Jueves'], (2)[4, 'Viernes'], (2)[5, 'Sábado'], (2)[6, 'Domingo']
+        }
+
+        for (let [indice, valor] of dias.entries()) {
+            console.log(indice, valor);
+        }
+    </script>
+</body>
+</html>
