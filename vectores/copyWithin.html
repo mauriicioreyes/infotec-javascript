@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>copyWithin - Funciones para Arrays</title>
+</head>
+<body>
+    <h2>copyWithin</h2>
+    <h3>Funciones nativas de JS para operar con Arrays</h3>
+
+    <script>
+        let arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        arreglo1.copyWithin(0, 5, 8);
+        console.log(arreglo1);
+        
+        arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        arreglo1.copyWithin(0, 5);
+        console.log(arreglo1);
+        
+        arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        arreglo1.copyWithin(0, -2);
+        console.log(arreglo1);
+    </script>
+</body>
+</html>
