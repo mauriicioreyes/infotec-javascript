@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>find</title>
+</head>
+<body>
+    <h2>Método find</h2>
+    <h3>Búsqueda de valores e índices en un arreglo</h3>
+    
+    <script>
+        const personas = [
+            {
+                nombre: "Carlos",
+                edad: 20
+            },
+            {
+                nombre: "Enrique",
+                edad: 29
+            },
+            {
+                nombre: "Alejandra",
+                edad: 17
+            },
+            {
+                nombre: "Jeniffer",
+                edad: 25
+            },
+            {
+                nombre: "Crazy",
+                edad: 100
+            }
+        ]
+
+        let personaBuscar = "Jeniffer";
+
+        // let busqueda = personas.find((persona, indice) => persona.nombre == personaBuscar); // Función flecha
+        let busqueda = personas.find(function(persona, indice) { return persona.nombre == personaBuscar }); // Función anónima
+        if (busqueda != undefined) {
+            console.log(busqueda);
+        } else {
+            console.log(`No se encuentra ${personaBuscar} en el vector de objetos.`);
+        }
+
+        // let indice = personas.findIndex((persona, indice) => persona.nombre == personaBuscar); // Función flecha
+        let indice = personas.findIndex(function(persona, indice) { return persona.nombre == personaBuscar }); // Función anónima
+        if (indice != -1) {
+            console.log(`${personaBuscar} se encuentra en la posición ${indice} del arreglo.`);
+        } else {
+            console.log(`No se encuentra ${personaBuscar} en el vector de objetos.`)
+        }
+
+    </script>
+</body>
+</html>
