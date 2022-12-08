@@ -1,0 +1,37 @@
+<!DOCTYPE htlm>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Arrays No Densos o Dispersos</title>
+</head>
+<body>
+    <h2>Arrays No Densos o Dispersos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    
+    <script>
+        let listadoPremios = [];
+        let cantidad = 1;
+
+        do {
+            let premio = getRandomIntInclusive(1, 1000);
+            console.log(cantidad + ': ' +premio);
+            listadoPremios[premio] = (1000 * (cantidad));
+            console.log(listadoPremios[premio]);
+            cantidad++;
+        } while (cantidad != 11);
+
+        for (let x = 0; x < listadoPremios.length; x++) {
+            // document.write(`listadoPremios[${x}]: ${listadoPremios[x]} <br/>`)
+            if (listadoPremios[x] != undefined) {
+                document.write(`Carton ${x} tiene un premio de ${listadoPremios[x]} <br/>`)
+            }
+        }
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+    </script>
+</body>
+</html>

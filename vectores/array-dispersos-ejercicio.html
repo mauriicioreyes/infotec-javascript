@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays No Densos o Dispersos</title>
+</head>
+<body>
+    <h2>Arrays No Densos o Dispersos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let depositos = [];
+        let numeroCliente, monto;
+        do {
+            numeroCliente = prompt('Ingresa el número de cliente (0 para finalizar):');
+            numeroCliente = parseInt(numeroCliente);
+            if (numeroCliente != 0) {
+                monto = prompt('Ingresa el monto a depositar:');
+                monto = parseInt(monto);
+                depositos[numeroCliente] = monto;
+            }
+        } while (numeroCliente != 0);
+
+        let suma = 0;
+        let cantidad = 0;
+        for (let x = 0; x < depositos   .length; x++) {
+            if (depositos[x] != undefined) {
+                suma += depositos[x];
+                cantidad++;
+            }
+        }
+
+        document.write(`Cantidad de depósitos: ${cantidad} <br/>`);
+        document.write(`Total depositado por todos los cliente: ${suma}`);
+    </script>
+</body>
+</html>

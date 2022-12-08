@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Arrays Densos</title>
+</head>
+<body>
+    <h2>Arrays Densos</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = [];
+        let valor;
+        let indice = 0;
+        do {
+            valor = prompt('Ingrese un valor entero (0 para finalizar)', '');
+            valor = parseInt(valor);
+            if (valor != 0) {
+                vector[indice] = valor;
+                indice++;
+            }
+        } while (valor != 0);
+
+        
+        let suma = 0;
+        for (let x = 0; x < vector.length; x++) {
+            suma += vector[x];
+        }
+        document.write(`Se ingresaron ${vector.length} valores <br/>`);
+        console.log(vector);
+        document.write(`La suma de los valores ingresados es ${suma} <br/>`);
+    </script>
+</body>
+</html>
