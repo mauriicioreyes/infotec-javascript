@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Splice - Arrays</title>
+</head>
+<body>
+    <h2>Método Splice - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let arregloElementos = [10, 30, 1, 4, 5, 0, 90, 46, 56, 33, 11, 09];
+        imprimirTitulo('Vector Inicial');
+        recorrerArreglo(arregloElementos);
+
+        arregloElementos.splice(1, 3); // Eliminar rango de elementos
+        
+        let nuevoArreglo = arregloElementos.splice(0, 3); // Extraer elementos y agregarlos a un nuevo arreglo
+
+        imprimirTitulo('Vector modificado por método splice (borrar elementos)');
+        recorrerArreglo(arregloElementos);
+        
+        imprimirTitulo('Nuevo vector creado mediante splice (extrae elementos)');
+        recorrerArreglo(nuevoArreglo);
+        
+        let ultimosDosElementos = arregloElementos.splice(-2, 2);
+        imprimirTitulo('Últimos dos elementos del arreglo');
+        recorrerArreglo(ultimosDosElementos); 
+        
+        imprimirTitulo('Vector modificado por método splice (extrae elementos)');
+        recorrerArreglo(arregloElementos);
+
+        function recorrerArreglo(arreglo) {
+            for (let x = 0; x < arreglo.length; x++) {
+                document.write(`arreglo[${x}]: ${arreglo[x]} <br/>`)
+            }
+        }
+
+        function imprimirTitulo(texto) {
+                document.write(`<h3>${texto}</h3>`);
+            }
+    </script>
+</body>
+</html>

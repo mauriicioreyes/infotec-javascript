@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Insertar elementos mediante Splice - Arrays</title>
+</head>
+<body>
+    <h2>Insertar elementos mediante Splice - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        imprimirTitulo('Vector Original');
+        recorrerArreglo(vector);
+
+        vector.splice(1, 0, 10, 20, 30, 40); // Insertar elementos en determinada posición
+
+        imprimirTitulo('Vector modificado por splice (insertando elementos)');
+        recorrerArreglo(vector);
+
+        // Borrar e insertar elementos
+        vector.splice(1, 9, 10, 20, 30, 40, 50);
+        imprimirTitulo('Vector modificado por splice (elimina 9 elementos e inserta 5)');
+        recorrerArreglo(vector);
+
+
+        function imprimirTitulo(texto) {
+            document.write(`<h3>${texto}</h3>`);
+        }
+
+        function recorrerArreglo(arreglo) {
+            for (let x = 0; x < arreglo.length; x++) {
+                document.write(`arreglo[${x}]: ${arreglo[x]}<br/>`);
+            }
+        }
+    </script>
+</body>
+</html>
