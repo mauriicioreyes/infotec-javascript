@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Sort - Arrays</title>
+</head>
+<body>
+    <h2>Método Sort - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let nombres = ['Alejandro', 'Monserrat', 'Jeniffer', 'Andrea', 'Miranda', 'Zapopan', 'Elizabeth', 'Mariana', 'Nancy', 'Rafael', 'Cuauhtemoc'];
+        document.write('<h3>Vector antes de ordenarlo</h3>');
+        for (let x = 0; x < nombres.length; x++) {
+            document.write(`nombres[${x}]: ${nombres[x]} <br/>`);
+        }
+        
+        nombres.sort();
+        document.write('<h3>Vector después de ordenarlo</h3>');
+        for (let x = 0; x < nombres.length; x++) {
+            document.write(`nombres[${x}]: ${nombres[x]} <br/>`);
+        }
+    </script>
+</body>
+</html>

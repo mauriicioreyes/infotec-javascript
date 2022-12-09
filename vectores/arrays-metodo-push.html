@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Métodos Push y Pop - Arrays</title>
+</head>
+<body>
+    <h2>Métodos Push y Pop - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = [];
+        vector[0] = 10;
+        vector[1] = 45;
+        vector.push(90);
+        vector.push(4.7);
+        vector.push(30, 50, 80, 100);
+        vector.pop();
+        for (let x = 0; x < vector.length; x++) {
+            document.write(`vector[${x}]: ${vector[x]} <br/>`);
+        }
+        document.write(`Se eliminó ${vector.pop()} <br/>`);
+        document.write(`vector.length: ${vector.length} <br/>`);
+
+    </script>
+</body>
+</html>

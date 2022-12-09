@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Sort con función anónima</title>
+</head>
+<body>
+    <h2>Método Sort con función anónima</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let numeros = [2, 100, 0, 9, 10, 11, 1, 50, 30, 5];
+        document.write('<h3>Vector antes de ordenarlo</h3>');
+        for (let x = 0; x < numeros.length; x++) {
+            document.write(`numeros[${x}]: ${numeros[x]} <br/>`);
+        }
+
+        // Método sort pasando función anónima
+        numeros.sort(function(valor1, valor2) {
+            if (valor1 < valor2) {
+                return -1; // valor1 es menor que valor2
+            } else {
+                return 1; // valor1 es mayor que valor2
+            }
+        });
+        
+        document.write('<h3>Vector después de ordenarlo</h3>');
+        for (let x = 0; x < numeros.length; x++) {
+            document.write(`numeros[${x}]: ${numeros[x]} <br/>`);
+        }
+    </script>
+</body>
+</html>

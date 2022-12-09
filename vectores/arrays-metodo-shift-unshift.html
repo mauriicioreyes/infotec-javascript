@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Métodos Shift y Unshift - Arrays</title>
+</head>
+<body>
+    <h2>Métodos Shift y Unshift - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let valores = [];
+        let valor;
+        do {
+            valor = parseInt(prompt('Ingresa un valor (0 para terminar):'));
+            console.log(valor);
+            if (valor < 100) {
+                valores.unshift(valor);
+            } else {
+                valores.push(valor);
+            }
+        } while (valor != 0);
+        valores.shift();
+        // delete valores[0]; // convierte el vector en disperso (o no denso)
+        for (let x = 0; x < valores.length; x++) {
+            document.write(`valores[${x}]: ${valores[x]} <br/>`);
+        }
+    </script>
+</body>
+</html>

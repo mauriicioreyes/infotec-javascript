@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Sort y Reverse - Arrays</title>
+</head>
+<body>
+    <h2>Método Sort y Reverse - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+    
+    <script>
+        let vectorNumeros = new Array(10);
+        document.write('<h3>Vector antes de ordenarlo</h3>');
+        llenarVector(vectorNumeros);
+        
+        document.write('<h3>Vector ordenado de menor a mayor</h3>');
+        ordenarVectorMenorMayor(vectorNumeros);
+        recorrerVector(vectorNumeros);
+        
+        document.write('<h3>Vector ordenado de mayor a menor</h3>');
+        vectorNumeros.reverse();
+        recorrerVector(vectorNumeros);
+
+        function getRandomIntInclusive(min, max) {
+            let randomValue = 0;
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            randomValue = Math.floor(Math.random() * (max - min + 1) + min);
+            return randomValue;
+        }
+
+        function recorrerVector(vector) {
+            for (let x = 0; x < vector.length; x++) {
+                document.write(`vectorNumeros[${x}]: ${vector[x]} <br/>`);
+            }
+        }
+
+        function llenarVector(vector) {
+            for (let x = 0; x < vector.length; x++) {
+                vector[x] = getRandomIntInclusive(1, 1000);
+                document.write(`vectorNumeros[${x}]: ${vector[x]} <br/>`);
+            }
+        }
+
+        function ordenarVectorMenorMayor(vector) {
+            vector.sort(function (valor1, valor2) {
+                if (valor1 > valor2) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

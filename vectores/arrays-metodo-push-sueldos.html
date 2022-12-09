@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Push</title>
+</head>
+<body>
+    <h2>Método Push</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let sueldos = [];
+        let monto, suma = 0;
+        do {
+            monto = parseInt(prompt('Ingresa el sueldo (0 para finalizar):'));
+            if (monto != 0) {
+                sueldos.push(monto);
+                suma += monto;
+                console.log(suma);
+            }
+            console.log(sueldos);
+        } while (monto != 0);
+        
+        for (let x = 0; x < sueldos.length; x++) {
+            document.write(`vector[${x}]: ${sueldos[x]} <br/>`);
+        }
+        document.write(`<h3>Suma: ${suma}</h3>`);
+    </script>
+</body>
+</html>

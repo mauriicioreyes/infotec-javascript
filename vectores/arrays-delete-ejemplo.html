@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Eliminar elemento específico - Delete</title>
+</head>
+<body>
+    <h2>Eliminar elemento específico - Delete</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = new Array(10);
+        console.log(vector.length);
+        
+        for (let x = 0; x < vector.length; x++) {
+            vector[x] = getRandomIntInclusive(1, 1000);
+        }
+        
+        document.write('<h3>Vector Original</h3>');
+        for (let x = 0; x < vector.length; x++) {
+            document.write(`vector[${x}]: ${vector[x]}<br/>`);
+        }
+
+        document.write('<h3>Vector Modificado</h3>');
+        // for (let x = 0; x < vector.length; x++) {
+        //     if (vector[x] % 2 === 0) {
+        //         delete vector[x];
+        //     }
+        //     document.write(`vector[${x}]: ${vector[x]} <br/>`);
+        // }
+
+        for (let x = 0; x < vector.length; x+=2) {
+            // El 0 se considera par
+            delete vector[x];
+            console.log(x);
+        }
+
+        for (let x = 0; x < vector.length; x++) {
+            document.write(`vector[${x}]: ${vector[x]} <br/>`);
+        }
+        function getRandomIntInclusive(min, max) {
+            let randomValue = 0;
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            randomValue = Math.floor(Math.random() * (max - min + 1) + min);
+            return randomValue;
+        }
+    </script>
+</body>
+</html>
