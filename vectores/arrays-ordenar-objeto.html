@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ordenar arreglo de objetos</title>
+    </head>
+    <body>
+        <h2>Ordenar arreglo de objetos</h2>
+        <h3>Ejemplo de JavaScript</h3>
+
+        <script>
+            let arregloObjetos = [
+                {
+                    nombre: "Mauricio",
+                    edad: 26
+                },
+                {
+                    nombre: "Victor",
+                    edad: 46
+                },
+                {
+                    nombre: "Carlos",
+                    edad: 18
+                },
+                {
+                    nombre: "Michel",
+                    edad: 25
+                },
+                {
+                    nombre: "Jeniffer",
+                    edad: 17
+                },
+                {
+                    nombre: "Valeria",
+                    edad: 32
+                },
+                {
+                    nombre: "Patricia",
+                    edad: 45
+                }
+            ];
+            
+            document.write('<h3>Personas y sus edades</h3>');
+            recorrerArreglo(arregloObjetos);
+
+            document.write('<h3>Personas ordenadas por sus edades</h3>');
+            arregloObjetos.sort(function (persona1, persona2) {
+                if (persona1.edad > persona2.edad) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+
+            recorrerArreglo(arregloObjetos);
+
+            function recorrerArreglo(arreglo) {
+                for (let x = 0; x < arreglo.length; x++) {
+                    document.write(`${arreglo[x].nombre} - ${arregloObjetos[x].edad} años. <br/>`);
+                }
+            }
+        </script>
+    </body>
+    </html>
