@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Slice - Arrays</title>
+</head>
+<body>
+    <h2>Método Slice - Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let arreglo = ['Mariano', 'Alonso', 'Georgina', 'Mireya', 'Emilio', 'Sebastian', 'Javier'];
+        console.log(arreglo)
+        imprimirTitulo('Vector original');
+        recorrerArreglo(arreglo);
+        
+        // Extrae elementos sin modificar el vector original
+        // Extrae a partir de una posición y hasta la posición final sin incluirla
+        let arregloNuevo = arreglo.slice(4, 6);
+        console.log(arregloNuevo);
+
+        imprimirTitulo('Nuevo vector mediante slice(4, 6)');
+        recorrerArreglo(arregloNuevo);
+
+        // Extraer elementos desde una posición hasta el final del vector
+        let otroArreglo = arreglo.slice(4);
+        imprimirTitulo('Nuevo vector mediante slice(4)');
+        recorrerArreglo(otroArreglo);
+
+        // Extrae elementos desde el final y un número de posiciones
+        // (3) ['Emilio', 'Sebastian', 'Javier']
+        let otroArregloNegativo = arreglo.slice(-3); 
+        console.log(otroArregloNegativo);
+
+        // Extrae elementos desde el final cierto numero de posiciones, e ignora cierta cantidad de elementos
+        // (2) ['Mireya', 'Emilio']
+        let otroArregloNegativo2 = arreglo.slice(-4,-2); 
+        console.log(otroArregloNegativo2);
+
+        // Extrae elementos desde una posición y omite cierta cantidad de elementos desde el final del vector
+        // (4)['Alonso', 'Georgina', 'Mireya', 'Emilio']
+        let otroArregloNegativo3 = arreglo.slice(1, -2);
+        console.log(otroArregloNegativo3);
+
+        function imprimirTitulo(texto) {
+            document.write(`<h3>${texto}</h3>`);
+        }
+
+        function recorrerArreglo(vector) {
+            for (let x = 0; x < vector.length; x++) {
+                document.write(`arreglo[${x}]: ${vector[x]}<br/>`);
+            }
+        }
+    </script>
+</body>
+</html>
