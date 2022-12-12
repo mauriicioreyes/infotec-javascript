@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Días Laborables - Do While</title>
+</head>
+<body>
+    <h2>Días Laborables - Do While</h2>
+    <h3>Actividad Complementaria de JavaScript</h3>
+
+    <script>
+        let diasLaborables = 0, diasNoLaborables = 0, dia;
+
+        do {
+            dia = parseInt(prompt('Ingresa un día (0 para salir)'));
+            if (dia != 0 && dia <= 7) {
+                if (dia > 5) {
+                    diasNoLaborables += 1;
+                    alert('Día No Laborable');
+                } else {
+                    diasLaborables += 1;
+                    alert('Día Laborable');
+                }
+            } else {
+                alert('¡Día inválido!');
+            }
+        } while (dia != 0);
+        document.write(`Total Días Laborables: ${diasLaborables}<br/>`);
+        document.write(`Total Días Inhábiles: ${diasNoLaborables}`);
+    </script>
+</body>
+</html>
