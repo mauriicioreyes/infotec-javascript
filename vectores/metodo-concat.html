@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método Concat - Aplicado a Arrays</title>
+</head>
+<body>
+    <h2>Método Concat - Aplicado a Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = [10, 20, 30, 40, 50];
+        let vectorNuevo = vector.concat(1, 2, 3);
+        let otroVector = [100, 200, 300];
+        let vectorSuma = vectorNuevo.concat(otroVector);
+        console.log({vector, vectorNuevo});
+        document.write('<h3>Vector origen</h3>');
+        document.write(vector.join());
+        document.write('<h3>Vector generado</h3>');
+        document.write(vectorNuevo.join());
+        document.write('<h3>Segundo vector</h3>')
+        document.write(otroVector.join());
+        document.write('<h3>Vectores concatenados</h3>')
+        document.write(vectorSuma);
+    </script>
+</body>
+</html>
