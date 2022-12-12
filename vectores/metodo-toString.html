@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Método toString - Aplicado a Arrays</title>
+</head>
+<body>
+    <h2>Método toString - Aplicado a Arrays</h2>
+    <h3>Ejemplo de JavaScript</h3>
+
+    <script>
+        let vector = new Array(10);
+        
+        document.write('<h3>Vector</h3>');
+        for (let x = 0; x < vector.length; x++) {
+            vector[x] = getRandomIntInclusive(0, 1000);
+            document.write(`vector[${x}]: ${vector[x]}<br/>`);
+        }
+
+        let cadena = vector.toString();
+
+        console.log({vector, cadena});
+        document.write('<h3>Vector a cadena mediante toString()</h3>');
+        document.write(cadena);
+
+        function getRandomIntInclusive(min, max) {
+            let randomValue = 0;
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            randomValue = Math.floor(Math.random() * (max - min + 1) + min);
+            return randomValue
+        }
+    </script>
+</body>
+</html>
